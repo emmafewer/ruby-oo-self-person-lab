@@ -38,19 +38,6 @@ class Person
         @hygiene
     end 
 
-    def check_limit
-        if @happiness > 10
-            @happiness = 10
-        elsif @happiness < 0
-            @happiness = 0
-        end
-        if @hygiene > 10
-            @hygiene = 10 
-        elsif @hygiene < 0
-            @hygiene = 0
-        end
-    end
-
     def clean?
         if @hygiene > 7 
             true
@@ -95,8 +82,6 @@ class Person
     def call_friend(friend)
         self.happiness+=3
         friend.happiness+=3
-        friend.check_limit
-        self.check_limit
         "Hi #{friend.name}! It's #{self.name}. How are you?"
     end 
 
@@ -112,8 +97,6 @@ class Person
         else 
             blah = "blah blah blah blah blah"
         end
-        person.check_limit
-        self.check_limit
         blah
     end
 end
