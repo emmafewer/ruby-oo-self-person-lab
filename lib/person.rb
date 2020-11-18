@@ -1,5 +1,5 @@
 class Person
-    attr_reader :name 
+    attr_reader :name, :happiness, :hygiene
     attr_accessor :bank_account
 
 
@@ -28,14 +28,6 @@ class Person
         else
             @hygiene = hygiene
         end 
-    end 
-
-    def happiness
-        @happiness
-    end 
-
-    def hygiene
-        @hygiene
     end 
 
     def clean?
